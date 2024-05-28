@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/welcome",
   output: "export",
-  distDir: "docs",
   cleanDistDir: true,
 };
 
