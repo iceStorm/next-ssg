@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/welcome",
+  basePath: "/next-ssg",
+  assetPrefix: "/next-ssg/",
+
   output: "export",
   cleanDistDir: true,
 };
