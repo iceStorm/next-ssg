@@ -24,6 +24,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  BASE_PATH: /next-ssg # only need this when running on github pages because they are sub domains per repo
+
 jobs:
   # Build job
   build:
@@ -85,6 +88,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     needs: build
     steps:
